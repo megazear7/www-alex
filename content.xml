@@ -1,0 +1,33 @@
+{
+    aboutme: {
+        tactype: "page",
+        content: {
+            tactype: "content",
+            banner: {
+                tacType: "component",
+                compType: "banner",
+                title: {
+                    tacType: "component",
+                    compType: "title",
+                    text: "Hello, this is my About Me Page"
+                },
+                image: {
+                    tacType: "component",
+                    compType: "image",
+                    href: "https://www.google.com"
+                }
+            }
+        }
+    },
+    contactus: {
+        tactype: "page",
+        content: {
+            tactype: "content",
+            text: {
+                tacType: "component",
+                compType: "text",
+                text: "Hello, I am Bob. My phone number is 111-1111"
+            }
+        }
+    }
+}
