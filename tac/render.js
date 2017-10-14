@@ -25,6 +25,16 @@ Object.keys(content["content"]).forEach(function(componentName) {
 });
 
 function generate(template) {
+    var html = "";
+
+    var str = "I learned to play the Ukulele in Lebanon."
+    var regex = /div/g, result, indices = [];
+
+    while ( (result = regex.exec(str)) ) {
+        console.log(result.index)
+        console.log(result)
+    }
+
     return template;
 }
 
