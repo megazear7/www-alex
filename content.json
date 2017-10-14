@@ -1,8 +1,7 @@
 {
     "aboutme": {
-        "tactype": "page",
+        "tacType": "page",
         "content": {
-            "tactype": "content",
             "banner": {
                 "tacType": "component",
                 "compType": "banner",
@@ -20,9 +19,9 @@
         }
     },
     "contactus": {
-        "tactype": "page",
+        "tacType": "page",
         "content": {
-            "tactype": "content",
+            "tacType": "content",
             "text": {
                 "tacType": "component",
                 "compType": "text",
