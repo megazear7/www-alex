@@ -1,9 +1,9 @@
 {
     "aboutme": {
-        "tactyp"e: "page",
-        "conten"t: {
-            "tactyp"e: "content",
-            "banne"r: {
+        "tactype": "page",
+        "content": {
+            "tactype": "content",
+            "banner": {
                 "tacType": "component",
                 "compType": "banner",
                 "title": {
