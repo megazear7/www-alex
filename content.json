@@ -2,8 +2,9 @@
     "aboutme": {
         "tacType": "page",
         "title": "About Me",
-        "content": {
-            "banner": {
+        "pageType": "basicpage",
+        "content": [
+            {
                 "tacType": "component",
                 "compType": "banner",
                 "testProp": "Hello, World!",
@@ -18,17 +19,6 @@
                     "href": "https://www.google.com"
                 }
             }
-        }
-    },
-    "contactus": {
-        "tacType": "page",
-        "content": {
-            "tacType": "content",
-            "text": {
-                "tacType": "component",
-                "compType": "text",
-                "text": "Hello, I am Bob. My phone number is 111-1111"
-            }
-        }
+        ]
     }
 }

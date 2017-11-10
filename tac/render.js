@@ -9,32 +9,35 @@ path.split("/").forEach(function (val) {
   page = page[val];
 });
 
-var componentTemplates = {
-};
+var componentTemplates = {};
+var pageTemplates = {};
 
 const isDirectory = source => fs.lstatSync(source).isDirectory()
-const componentDirectories = source =>
+const directories = source =>
   fs.readdirSync(source).map(name => join(source, name)).filter(isDirectory)
 
-componentDirectories("components").forEach(function(directory) {
-    var componentName = directory.split("/").slice(-1)[0];
-    var componentTemplate = directory + "/" + componentName + ".html";
-    componentTemplates[componentName] = fs.readFileSync(componentTemplate, 'utf8');
+directories("components").forEach(function(directory) {
+    var name = directory.split("/").slice(-1)[0];
+    var template = directory + "/" + name + ".html";
+    componentTemplates[name] = fs.readFileSync(template, 'utf8');
 });
 
-var html = "<html>\n<head>\n</head>\n<body>";
-
-Object.keys(page["content"]).forEach(function(componentName) {
-    var template = componentTemplates[componentName]
-    var metadata = page["content"][componentName];
-
-    metadata.page = page
-
-    var componentHtml =  Mustache.render(template, metadata, componentTemplates);
-
-    html += "\n" + componentHtml;
+directories("pages").forEach(function(directory) {
+    var name = directory.split("/").slice(-1)[0];
+    var template = directory + "/" + name + ".html";
+    pageTemplates[name] = fs.readFileSync(template, 'utf8');
 });
 
-html += "</body>\n</html>";
+page.render = function() {
+    this.page = page;
+    this.render = function() {
+        this.page = page;
+        return Mustache.render('{{> ' + this.compType  + '}}', this, componentTemplates);
+    };
+
+    return Mustache.render('{{> ' + this.compType  + '}}', this, componentTemplates);
+};
+
+var html =  Mustache.render(pageTemplates[page.pageType], page, componentTemplates);
 
 console.log(html);
