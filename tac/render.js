@@ -28,15 +28,16 @@ directories("pages").forEach(function(directory) {
     pageTemplates[name] = fs.readFileSync(template, 'utf8');
 });
 
-page.render = function() {
+var render;
+
+render = function() {
     this.page = page;
-    this.render = function() {
-        this.page = page;
-        return Mustache.render('{{> ' + this.compType  + '}}', this, componentTemplates);
-    };
+    this.render = render;
 
     return Mustache.render('{{> ' + this.compType  + '}}', this, componentTemplates);
 };
+
+page.render = render 
 
 var html =  Mustache.render(pageTemplates[page.pageType], page, componentTemplates);
 
