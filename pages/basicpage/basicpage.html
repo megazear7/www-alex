@@ -4,8 +4,25 @@
         <script src="/build.js"></script>
     </head>
     <body>
-        {{#compList}}
-            {{{render}}}
-        {{/compList}}
+        <div class="header">
+            {{#header}}
+                {{{header}}}
+            {{/header}}       
+        </div>
+        <div class="secondary">
+            {{#leftCompList}}
+                {{{render}}}
+            {{/leftCompList}}
+        </div>
+        <div class="primary">
+            {{#rightCompList}}
+                {{{render}}}
+            {{/rightCompList}}
+        </div>
+        <div class="footer">
+            {{#footer}}
+                {{{header}}}
+            {{/footer}}
+        </div>
     </body>
 </html>

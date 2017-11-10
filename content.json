@@ -1,27 +1,69 @@
 {
+    "tacType": "page",
+    "title": "Home",
+    "pageType": "basicpage",
+    "header": {
+        "compType": "header"
+    },
+    "leftCompList": {
+        "compType": "compList",
+        "components": [
+            {
+                "tacType": "component",
+                "compType": "banner",
+                "testProp": "Hello, World!",
+                "title": {
+                    "tacType": "component",
+                    "compType": "title",
+                    "subText": "I am the subtext"
+                },
+                "image": {
+                    "tacType": "component",
+                    "compType": "image",
+                    "href": "https://www.google.com"
+                }
+            }
+        ]
+    },
+    "rightCompList": {
+        "compType": "compList",
+        "components": [
+            {
+                "tacType": "component",
+                "compType": "banner",
+                "testProp": "Hello, World!",
+                "title": {
+                    "tacType": "component",
+                    "compType": "title",
+                    "subText": "I am the subtext"
+                },
+                "image": {
+                    "tacType": "component",
+                    "compType": "image",
+                    "href": "https://www.google.com"
+                }
+            }
+        ]
+    },
+    "footer": {
+        "compType": "footer"
+    },
     "aboutme": {
-        "tacType": "page",
         "title": "About Me",
         "pageType": "basicpage",
-        "compList": {
+        "header": {
+            "compType": "header"
+        },
+        "leftCompList": {
             "compType": "compList",
-            "components": [
-                {
-                    "tacType": "component",
-                    "compType": "banner",
-                    "testProp": "Hello, World!",
-                    "title": {
-                        "tacType": "component",
-                        "compType": "title",
-                        "subText": "I am the subtext"
-                    },
-                    "image": {
-                        "tacType": "component",
-                        "compType": "image",
-                        "href": "https://www.google.com"
-                    }
-                }
-            ]
+            "components": []
+        },
+        "rightCompList": {
+            "compType": "compList",
+            "components": []
+        },
+        "footer": {
+            "compType": "footer"
         }
     }
 }

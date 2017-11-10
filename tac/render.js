@@ -5,9 +5,12 @@ const { join } = require('path')
 var render = function(path) {
     var page = JSON.parse(fs.readFileSync('content.json', 'utf8'));
 
-    path.split("/").forEach(function (val) {
-      page = page[val];
-    });
+    if (path.length > 0) {
+        path.split("/").forEach(function (val) {
+            console.log(val);
+          page = page[val];
+        });
+    }
 
     var componentTemplates = {};
     var pageTemplates = {};
