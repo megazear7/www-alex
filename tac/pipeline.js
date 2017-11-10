@@ -44,10 +44,6 @@ var build = function() {
             console.log(err);
         }
     });
-
-    console.log("building js and css");
-    console.log(js);
-    console.log(css);
 };
 
 module.exports = { build: build };

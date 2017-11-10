@@ -3,22 +3,25 @@
         "tacType": "page",
         "title": "About Me",
         "pageType": "basicpage",
-        "content": [
-            {
-                "tacType": "component",
-                "compType": "banner",
-                "testProp": "Hello, World!",
-                "title": {
+        "compList": {
+            "compType": "compList",
+            "components": [
+                {
                     "tacType": "component",
-                    "compType": "title",
-                    "subText": "I am the subtext"
-                },
-                "image": {
-                    "tacType": "component",
-                    "compType": "image",
-                    "href": "https://www.google.com"
+                    "compType": "banner",
+                    "testProp": "Hello, World!",
+                    "title": {
+                        "tacType": "component",
+                        "compType": "title",
+                        "subText": "I am the subtext"
+                    },
+                    "image": {
+                        "tacType": "component",
+                        "compType": "image",
+                        "href": "https://www.google.com"
+                    }
                 }
-            }
-        ]
+            ]
+        }
     }
 }
