@@ -33,6 +33,18 @@ var build = function() {
 
     addFromDirectory("./global");
 
+    fs.writeFile("./build/build.js", js, function(err) {
+        if (err) {
+            console.log(err);
+        }
+    });
+
+    fs.writeFile("./build/build.css", css, function(err) {
+        if (err) {
+            console.log(err);
+        }
+    });
+
     console.log("building js and css");
     console.log(js);
     console.log(css);
