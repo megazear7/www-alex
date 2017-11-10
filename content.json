@@ -1,6 +1,7 @@
 {
     "tacType": "page",
     "title": "Home",
+    "tacType": "page",
     "pageType": "basicpage",
     "header": {
         "compType": "header"
@@ -30,18 +31,8 @@
         "components": [
             {
                 "tacType": "component",
-                "compType": "banner",
-                "testProp": "Hello, World!",
-                "title": {
-                    "tacType": "component",
-                    "compType": "title",
-                    "subText": "I am the subtext"
-                },
-                "image": {
-                    "tacType": "component",
-                    "compType": "image",
-                    "href": "https://www.google.com"
-                }
+                "compType": "text",
+                "text": "Hello, World!"
             }
         ]
     },
@@ -50,6 +41,7 @@
     },
     "aboutme": {
         "title": "About Me",
+        "tacType": "page",
         "pageType": "basicpage",
         "header": {
             "compType": "header"
