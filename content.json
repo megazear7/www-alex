@@ -1,6 +1,7 @@
 {
     "aboutme": {
         "tacType": "page",
+        "title": "About Me",
         "content": {
             "banner": {
                 "tacType": "component",
@@ -9,7 +10,7 @@
                 "title": {
                     "tacType": "component",
                     "compType": "title",
-                    "text": "Hello, this is my About Me Page"
+                    "subText": "I am the subtext"
                 },
                 "image": {
                     "tacType": "component",

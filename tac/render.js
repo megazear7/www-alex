@@ -3,10 +3,10 @@ var Mustache = require('Mustache');
 const { join } = require('path')
 
 var path = process.argv[2];
-var content = JSON.parse(fs.readFileSync('content.json', 'utf8'));
+var page = JSON.parse(fs.readFileSync('content.json', 'utf8'));
 
 path.split("/").forEach(function (val) {
-  content = content[val];
+  page = page[val];
 });
 
 var componentTemplates = {
@@ -24,9 +24,11 @@ componentDirectories("components").forEach(function(directory) {
 
 var html = "<html>\n<head>\n</head>\n<body>";
 
-Object.keys(content["content"]).forEach(function(componentName) {
+Object.keys(page["content"]).forEach(function(componentName) {
     var template = componentTemplates[componentName]
-    var metadata = content["content"][componentName];
+    var metadata = page["content"][componentName];
+
+    metadata.page = page
 
     var componentHtml =  Mustache.render(template, metadata, componentTemplates);
 
