@@ -1,0 +1,27 @@
+{
+  "name": "tactile",
+  "version": "1.0.0",
+  "description": "A Json and Javascript based web content management system.",
+  "main": "app.js",
+  "directories": {
+    "test": "test"
+  },
+  "dependencies": {
+    "express": "^4.16.2",
+    "mustache": "^2.3.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/megazear7/tactile.git"
+  },
+  "author": "Alex Lockhart",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/megazear7/tactile/issues"
+  },
+  "homepage": "https://github.com/megazear7/tactile#readme"
+}
