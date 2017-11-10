@@ -5,6 +5,7 @@
             "banner": {
                 "tacType": "component",
                 "compType": "banner",
+                "testProp": "Hello, World!",
                 "title": {
                     "tacType": "component",
                     "compType": "title",
