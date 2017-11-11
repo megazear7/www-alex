@@ -1,0 +1,26 @@
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="/build.css">
+        <script src="/build.js"></script>
+    </head>
+    <body>
+        <div class="homepage-container">
+            {{#header}}
+                {{{render}}}
+            {{/header}}       
+            <div class="primary">
+                {{#primary}}
+                    {{{render}}}
+                {{/primary}}
+            </div>
+            <div class="secondary">
+                {{#secondary}}
+                    {{{render}}}
+                {{/secondary}}
+            </div>
+            {{#footer}}
+                {{{render}}}
+            {{/footer}}
+        </div>
+    </body>
+</html>

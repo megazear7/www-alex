@@ -2,9 +2,10 @@
     "tacType": "page",
     "title": "Home",
     "tacType": "page",
-    "pageType": "basicpage",
+    "pageType": "homepage",
     "header": {
-        "compType": "header"
+        "compType": "header",
+        "message": "My header"
     },
     "primary": {
         "compType": "compList",
@@ -34,15 +35,11 @@
     "aboutme": {
         "title": "About Me",
         "tacType": "page",
-        "pageType": "basicpage",
+        "pageType": "onecolumnpage",
         "header": {
             "compType": "header"
         },
-        "primary": {
-            "compType": "compList",
-            "components": []
-        },
-        "secondary": {
+        "content": {
             "compType": "compList",
             "components": []
         },

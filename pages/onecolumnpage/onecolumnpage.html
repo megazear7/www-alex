@@ -4,19 +4,14 @@
         <script src="/build.js"></script>
     </head>
     <body>
-        <div class="container">
+        <div class="onecolumn-container">
             {{#header}}
                 {{{render}}}
             {{/header}}       
-            <div class="primary">
-                {{#primary}}
+            <div class="content">
+                {{#content}}
                     {{{render}}}
-                {{/primary}}
-            </div>
-            <div class="secondary">
-                {{#secondary}}
-                    {{{render}}}
-                {{/secondary}}
+                {{/content}}
             </div>
             {{#footer}}
                 {{{render}}}

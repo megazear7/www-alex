@@ -23,7 +23,7 @@ body {
   background-color: #eaeaea;
 }
 
-.container {
+.homepage-container {
   display: grid;
   grid-gap: 0px;
   grid-template-columns: 1fr;
@@ -58,7 +58,7 @@ body {
 }
 
 @media (min-width: 600px) {
-  .container {
+  .homepage-container {
     grid-template-columns: 1fr;
     grid-template-rows: auto 1fr auto auto;
     grid-template-areas:
@@ -70,7 +70,7 @@ body {
 }
 
 @media (min-width: 770px) {
-  .container {
+  .homepage-container {
     grid-template-columns: 1fr;
     grid-template-rows: auto 1fr auto auto;
     grid-template-areas:
@@ -81,7 +81,7 @@ body {
 }
 
 @media (min-width: 1000px) {
-  .container {
+  .homepage-container {
     grid-template-columns: 1fr 500px 500px 1fr;
     grid-template-rows: auto 1fr auto;
     grid-template-areas:
@@ -89,6 +89,46 @@ body {
       "leftgutter primary secondary rightgutter"
       "footer     footer  footer    footer";
   }
+}
+body {
+  background-color: #eaeaea;
+}
+
+.onecolumn-container {
+  display: grid;
+  grid-gap: 0px;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto 1fr auto;
+  grid-template-areas:
+    "header"
+    "content"
+    "footer";
+  min-height: 100%;
+  margin: auto;
+}
+
+.header {
+  grid-area: header;
+}
+
+.content {
+  grid-area: header;
+}
+
+.footer {
+  grid-area: footer;
+}
+
+@media (min-width: 600px) {
+
+}
+
+@media (min-width: 770px) {
+
+}
+
+@media (min-width: 1000px) {
+
 }
 html {
   height: 100%;
