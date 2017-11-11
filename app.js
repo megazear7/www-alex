@@ -3,11 +3,12 @@ const tac = require('./tac/tac.js')
 
 const app = express();
 
-tac.build();
 app.use(express.static('build'));
 
 app.get('/*', function (req, res) {
-    console.log(req.path);
+    // TODO in Prod we should not rebuild the assets on every request
+    tac.build();
+    console.log("Request: " + req.path);
     res.send(tac.render(req.path.slice(1)));
 });
 

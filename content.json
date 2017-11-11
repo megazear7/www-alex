@@ -6,13 +6,22 @@
     "header": {
         "compType": "header"
     },
-    "leftCompList": {
+    "primary": {
+        "compType": "compList",
+        "components": [
+            {
+                "tacType": "component",
+                "compType": "text",
+                "text": "Hello, World!"
+            }
+        ]
+    },
+    "secondary": {
         "compType": "compList",
         "components": [
             {
                 "tacType": "component",
                 "compType": "banner",
-                "testProp": "Hello, World!",
                 "title": {
                     "tacType": "component",
                     "compType": "title",
@@ -26,16 +35,6 @@
             }
         ]
     },
-    "rightCompList": {
-        "compType": "compList",
-        "components": [
-            {
-                "tacType": "component",
-                "compType": "text",
-                "text": "Hello, World!"
-            }
-        ]
-    },
     "footer": {
         "compType": "footer"
     },
@@ -46,11 +45,11 @@
         "header": {
             "compType": "header"
         },
-        "leftCompList": {
+        "primary": {
             "compType": "compList",
             "components": []
         },
-        "rightCompList": {
+        "secondary": {
             "compType": "compList",
             "components": []
         },

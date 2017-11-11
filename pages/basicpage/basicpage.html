@@ -4,22 +4,20 @@
         <script src="/build.js"></script>
     </head>
     <body>
-        <div class="header">
+        <div class="container">
             {{#header}}
                 {{{render}}}
             {{/header}}       
-        </div>
-        <div class="secondary">
-            {{#leftCompList}}
-                {{{render}}}
-            {{/leftCompList}}
-        </div>
-        <div class="primary">
-            {{#rightCompList}}
-                {{{render}}}
-            {{/rightCompList}}
-        </div>
-        <div class="footer">
+            <div class="primary">
+                {{#primary}}
+                    {{{render}}}
+                {{/primary}}
+            </div>
+            <div class="secondary">
+                {{#secondary}}
+                    {{{render}}}
+                {{/secondary}}
+            </div>
             {{#footer}}
                 {{{render}}}
             {{/footer}}

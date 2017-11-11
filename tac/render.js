@@ -19,12 +19,14 @@ var render = function(path) {
     const directories = source =>
       fs.readdirSync(source).map(name => join(source, name)).filter(isDirectory)
 
+    // TODO in Prod we should not reload the components on every request
     directories("components").forEach(function(directory) {
         var name = directory.split("/").slice(-1)[0];
         var template = directory + "/" + name + ".html";
         componentTemplates[name] = fs.readFileSync(template, 'utf8');
     });
 
+    // TODO in Prod we should not reload the components on every request
     directories("pages").forEach(function(directory) {
         var name = directory.split("/").slice(-1)[0];
         var template = directory + "/" + name + ".html";
