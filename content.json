@@ -11,8 +11,8 @@
         "components": [
             {
                 "tacType": "component",
-                "compType": "text",
-                "text": "Hello, World!"
+                "compType": "image",
+                "href": "https://lh6.googleusercontent.com/eAPrFTUhLPNhMRozLrAOn-wkhl3n-l8cfrGfjCJM_32AXSo49AfmSgJSzyL3RclsxuBlCK60NAXjZFtZBRRanA=w2688-h1598-rw"
             }
         ]
     },
@@ -21,17 +21,10 @@
         "components": [
             {
                 "tacType": "component",
-                "compType": "banner",
-                "title": {
-                    "tacType": "component",
-                    "compType": "title",
-                    "subText": "I am the subtext"
-                },
-                "image": {
-                    "tacType": "component",
-                    "compType": "image",
-                    "href": "https://www.google.com"
-                }
+                "compType": "heading",
+                "size": "h2",
+                "heading": "Hello, my name is Alex Lockhart!",
+                "subText": "I am a software engineer!"
             }
         ]
     },

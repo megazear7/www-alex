@@ -1,6 +1,10 @@
+body {
+  background-color: #eaeaea;
+}
+
 .container {
   display: grid;
-  grid-gap: 10px;
+  grid-gap: 0px;
   grid-template-columns: 1fr;
   grid-template-rows: auto 1fr 1fr auto;
   grid-template-areas:
@@ -18,10 +22,14 @@
 
 .primary {
   grid-area: primary;
+  border-radius: 2px;
+  padding: 10px;
 }
 
 .secondary {
   grid-area: secondary;
+  border-radius: 2px;
+  padding: 10px;
 }
 
 .footer {
