@@ -112,7 +112,7 @@ body {
 }
 
 .content {
-  grid-area: header;
+  grid-area: content;
 }
 
 .footer {

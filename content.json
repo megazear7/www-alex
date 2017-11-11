@@ -41,7 +41,36 @@
         },
         "content": {
             "compType": "compList",
-            "components": []
+            "components": [
+                {
+                    "tacType": "component",
+                    "compType": "heading",
+                    "size": "h2",
+                    "heading": "Hello, I am the aboutme page"
+                }
+            ]
+        },
+        "footer": {
+            "compType": "footer"
+        }
+    },
+    "resume": {
+        "title": "Resume",
+        "tacType": "page",
+        "pageType": "onecolumnpage",
+        "header": {
+            "compType": "header"
+        },
+        "content": {
+            "compType": "compList",
+            "components": [
+                {
+                    "tacType": "component",
+                    "compType": "heading",
+                    "size": "h2",
+                    "heading": "Here is my resume"
+                }
+            ]
         },
         "footer": {
             "compType": "footer"
