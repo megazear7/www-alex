@@ -3,4 +3,38 @@
         {{heading}}
     </{{size}}>
     {{subText}}
+
+    <br>
+    <br>
+    For testing:
+    <hr>
+
+    --- Page ---
+    <br>
+    {{page.title}}
+    <hr>
+
+    --- Parent ---
+    <br>
+    {{page.parent.title}}
+    <hr>
+
+    --- Home ---
+    <br>
+    {{page.parent.home.title}}
+    <hr>
+
+    --- Children ---
+    <br>
+    {{#page.parent.children}}
+        <div>{{title}}</div>
+    {{/page.parent.children}}
+    <hr>
+
+    --- Siblings ---
+    <br>
+    {{#page.parent.siblings}}
+        <div>{{title}}</div>
+    {{/page.parent.siblings}}
+    <hr>
 </div>
