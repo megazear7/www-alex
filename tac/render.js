@@ -5,24 +5,44 @@ const { join } = require('path')
 var render = function(path) {
     var page = JSON.parse(fs.readFileSync('content.json', 'utf8'));
     var home = page;
-    var parent = page;
+
+    var containingPage = function(json) {
+        while(json != undefined && json.tacType != "page") {
+            json = json.parent;
+        }
+
+        return json;
+    };
+
+    var addReferences = function(json) {
+        for(var key in json) {
+            if (key != "siblings" && key != "home" && key != "parent" && key != "page" && typeof json[key] === "object") {
+                json[key].parent = json;
+                json[key].path = json.path + "/" + key;
+
+                if (json[key].tacType != "page") {
+                    json[key].page = containingPage(json[key]);
+                } else {
+                    json[key].home = home;
+                }
+
+                addReferences(json[key])
+            }
+        }
+    };
+
+    page.path = "";
+    page.home = home;
+    addReferences(page);
+
+    console.log(page);
+
     var pathParts = path.split("/");
 
     if (path.length > 0) {
         pathParts.forEach(function (val) {
             page = page[val];
         });
-
-        var parentPathParts = pathParts;
-        parentPathParts.pop();
-
-        if (parentPathParts.length > 0) {
-            parentPathParts.forEach(function (val) {
-                parent = page[val];
-            });
-        }
-    } else {
-        parent = { };
     }
 
     var componentTemplates = {};
@@ -49,24 +69,6 @@ var render = function(path) {
     var render;
 
     render = function() {
-        this.page = page;
-        this.page.home = home;
-        this.page.parent = parent;
-        this.page.siblings = [ ];
-        this.page.children = [ ];
-
-        for(var key in this.page) {
-            if (key != "parent" && this.page[key].tacType === "page") {
-                this.page.children.push(this.page[key]);
-            }
-        }
-
-        for(var key in this.page.parent) {
-            if (key != "parent" && this.page.parent[key].tacType === "page") {
-                this.page.siblings.push(this.page.parent[key]);
-            }
-        }
-
         this.render = render;
 
         return Mustache.render('{{> ' + this.compType  + '}}', this, componentTemplates);
