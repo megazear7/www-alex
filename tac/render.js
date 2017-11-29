@@ -35,7 +35,7 @@ var render = function(path) {
     page.home = home;
     addReferences(page);
 
-    console.log(page);
+    //console.log(page);
 
     var pathParts = path.split("/");
 
@@ -43,6 +43,11 @@ var render = function(path) {
         pathParts.forEach(function (val) {
             page = page[val];
         });
+    }
+
+    if (typeof page === "undefined") {
+      // TODO Return the correct HTTP response.
+      throw new Error("Page Not Found");
     }
 
     var componentTemplates = {};
@@ -74,7 +79,7 @@ var render = function(path) {
         return Mustache.render('{{> ' + this.compType  + '}}', this, componentTemplates);
     };
 
-    page.render = render 
+    page.render = render
 
     return Mustache.render(pageTemplates[page.pageType], page, componentTemplates);
 };
