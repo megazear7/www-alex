@@ -75,5 +75,27 @@
         "footer": {
             "compType": "footer"
         }
+    },
+    "exampleB": {
+        "title": "Example B",
+        "tacType": "page",
+        "pageType": "onecolumnpage",
+        "header": {
+            "compType": "header"
+        },
+        "content": {
+            "compType": "compList",
+            "components": [
+                {
+                    "tacType": "component",
+                    "compType": "heading",
+                    "size": "h2",
+                    "heading": "This is the Exable B page"
+                }
+            ]
+        },
+        "footer": {
+            "compType": "footer"
+        }
     }
 }

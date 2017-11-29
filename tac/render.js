@@ -14,15 +14,27 @@ var render = function(path) {
         return json;
     };
 
+    var isSafe = function(key, json) {
+      return ["children", "siblings", "home", "parent", "page"].indexOf(key) == -1 && typeof json[key] === "object";
+    }
+
     var addReferences = function(json) {
         for(var key in json) {
-            if (key != "siblings" && key != "home" && key != "parent" && key != "page" && typeof json[key] === "object") {
+            if (isSafe(key, json)) {
                 json[key].parent = json;
                 json[key].path = json.path + "/" + key;
 
                 if (json[key].tacType != "page") {
                     json[key].page = containingPage(json[key]);
                 } else {
+                    var siblings = [ ];
+                    for (var siblingName in json) {
+                      if (isSafe(siblingName, json) && json[siblingName].tacType === "page" && siblingName != key) {
+                        siblings.push(json[siblingName]);
+                      }
+                    }
+
+                    json[key].siblings = siblings;
                     json[key].home = home;
                 }
 
