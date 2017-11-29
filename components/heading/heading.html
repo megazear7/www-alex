@@ -33,9 +33,9 @@
 
     --- Children ---
     <br>
-    {{#page.parent.children}}
+    {{#page.children}}
         <div>{{title}}</div>
-    {{/page.parent.children}}
+    {{/page.children}}
     <hr>
 
     --- Siblings ---
@@ -43,5 +43,26 @@
     {{#page.siblings}}
         <div>{{title}}</div>
     {{/page.siblings}}
+    <hr>
+
+    --- Parent Page Children ---
+    <br>
+    {{#page.parent.children}}
+        <div>{{title}}</div>
+    {{/page.parent.children}}
+    <hr>
+
+    --- Home Page Children ---
+    <br>
+    {{#page.home.children}}
+        <div>{{title}}</div>
+    {{/page.home.children}}
+    <hr>
+
+    --- Home Page Siblings ---
+    <br>
+    {{#page.home.siblings}}
+        <div>{{title}}</div>
+    {{/page.home.siblings}}
     <hr>
 </div>

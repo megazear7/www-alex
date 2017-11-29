@@ -6,6 +6,18 @@ var render = function(path) {
     var page = JSON.parse(fs.readFileSync('content.json', 'utf8'));
     var home = page;
 
+    var isSafe = function(key, json) {
+      return ["children", "siblings", "home", "parent", "page"].indexOf(key) == -1 && typeof json[key] === "object";
+    };
+
+    var children = [ ];
+    for (var childrenName in home) {
+      if (isSafe(childrenName, home) && home[childrenName].tacType === "page") {
+        children.push(home[childrenName]);
+      }
+    }
+    home.children = children;
+
     var containingPage = function(json) {
         while(json != undefined && json.tacType != "page") {
             json = json.parent;
@@ -13,10 +25,6 @@ var render = function(path) {
 
         return json;
     };
-
-    var isSafe = function(key, json) {
-      return ["children", "siblings", "home", "parent", "page"].indexOf(key) == -1 && typeof json[key] === "object";
-    }
 
     var addReferences = function(json) {
         for(var key in json) {
@@ -34,7 +42,15 @@ var render = function(path) {
                       }
                     }
 
+                    var children = [ ];
+                    for (var childrenName in json[key]) {
+                      if (isSafe(childrenName, json[key]) && json[key][childrenName].tacType === "page") {
+                        children.push(json[key][childrenName]);
+                      }
+                    }
+
                     json[key].siblings = siblings;
+                    json[key].children = children;
                     json[key].home = home;
                 }
 

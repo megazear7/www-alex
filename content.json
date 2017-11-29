@@ -52,6 +52,50 @@
         },
         "footer": {
             "compType": "footer"
+        },
+        "subpagea": {
+            "title": "Sub Page A",
+            "tacType": "page",
+            "pageType": "onecolumnpage",
+            "header": {
+                "compType": "header"
+            },
+            "content": {
+                "compType": "compList",
+                "components": [
+                    {
+                        "tacType": "component",
+                        "compType": "heading",
+                        "size": "h2",
+                        "heading": "This is the Exable B page"
+                    }
+                ]
+            },
+            "footer": {
+                "compType": "footer"
+            }
+        },
+        "subpageb": {
+            "title": "Sub Page B",
+            "tacType": "page",
+            "pageType": "onecolumnpage",
+            "header": {
+                "compType": "header"
+            },
+            "content": {
+                "compType": "compList",
+                "components": [
+                    {
+                        "tacType": "component",
+                        "compType": "heading",
+                        "size": "h2",
+                        "heading": "This is the Exable B page"
+                    }
+                ]
+            },
+            "footer": {
+                "compType": "footer"
+            }
         }
     },
     "resume": {
