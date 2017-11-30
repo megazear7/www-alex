@@ -87,7 +87,7 @@
                 "components": [
                     {
                         "tacType": "component",
-                        "compType": "examples"
+                        "compType": "example"
                     }
                 ]
             },
@@ -130,7 +130,7 @@
             "components": [
                 {
                     "tacType": "component",
-                    "compType": "examples"
+                    "compType": "example"
                 }
             ]
         },
