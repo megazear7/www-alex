@@ -1,0 +1,63 @@
+<div class="examples">
+    <br>
+    <br>
+    For testing:
+    <hr>
+
+    {{path}}
+    <br>
+    {{parent.path}}
+    <br>
+
+    <hr>
+
+    --- Page ---
+    <br>
+    {{page.title}}
+    <hr>
+
+    --- Parent ---
+    <br>
+    {{page.parent.title}}
+    <hr>
+
+    --- Home ---
+    <br>
+    {{page.home.title}}
+    <hr>
+
+    --- Children ---
+    <br>
+    {{#page.children}}
+        <div>{{title}}</div>
+    {{/page.children}}
+    <hr>
+
+    --- Siblings ---
+    <br>
+    {{#page.siblings}}
+        <div>{{title}}</div>
+    {{/page.siblings}}
+    <hr>
+
+    --- Parent Page Children ---
+    <br>
+    {{#page.parent.children}}
+        <div>{{title}}</div>
+    {{/page.parent.children}}
+    <hr>
+
+    --- Home Page Children ---
+    <br>
+    {{#page.home.children}}
+        <div>{{title}}</div>
+    {{/page.home.children}}
+    <hr>
+
+    --- Home Page Siblings ---
+    <br>
+    {{#page.home.siblings}}
+        <div>{{title}}</div>
+    {{/page.home.siblings}}
+    <hr>
+</div>

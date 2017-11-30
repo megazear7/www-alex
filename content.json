@@ -13,7 +13,7 @@
             {
                 "tacType": "component",
                 "compType": "image",
-                "href": "https://lh6.googleusercontent.com/eAPrFTUhLPNhMRozLrAOn-wkhl3n-l8cfrGfjCJM_32AXSo49AfmSgJSzyL3RclsxuBlCK60NAXjZFtZBRRanA=w2688-h1598-rw"
+                "href": "https://lh4.googleusercontent.com/WhsARuhJGFtziC187aer_aSYFnpSa3LpVxNRPVutsB1XiazZ_G0WX30-5gAeYPiQFv-53RrItteVT-R_nMk69w=w2750-h1496-rw"
             }
         ]
     },
@@ -87,9 +87,7 @@
                 "components": [
                     {
                         "tacType": "component",
-                        "compType": "heading",
-                        "size": "h2",
-                        "heading": "This is the Exable B page"
+                        "compType": "examples"
                     }
                 ]
             },
@@ -132,9 +130,7 @@
             "components": [
                 {
                     "tacType": "component",
-                    "compType": "heading",
-                    "size": "h2",
-                    "heading": "This is the Exable B page"
+                    "compType": "examples"
                 }
             ]
         },
