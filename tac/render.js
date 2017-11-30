@@ -108,8 +108,6 @@ var render = function(path) {
         var componentModel = componentModels[this.compType];
 
         if (typeof componentModel !== "undefined") {
-          console.log(componentModels[this.compType]);
-
           this.model = componentModel.init(this);
         }
 
