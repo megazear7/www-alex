@@ -10,8 +10,8 @@ var models = { };
 // TODO in Prod we should not reload the components on every request
 directories("components").forEach(function(directory) {
     var name = directory.split("/").slice(-1)[0];
-    var filePath = directory + "/" + "model.js";
-    var modulePath = "./" + name + "/" + "model.js";
+    var filePath = directory + "/" + name + ".js";
+    var modulePath = "./" + name + "/" + name + ".js";
 
     if (fs.existsSync(filePath)) {
       var model = require(modulePath);
