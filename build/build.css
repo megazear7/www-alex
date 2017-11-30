@@ -1,3 +1,6 @@
+.examples hr {
+  border-color: orange;
+}
 .footer {
     height: 100px;
     background-color: gray;
