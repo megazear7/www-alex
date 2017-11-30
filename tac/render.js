@@ -1,6 +1,7 @@
 var fs = require('fs');
 var Mustache = require('Mustache');
 const { join } = require('path')
+const componentModels = require('../components/components.js')
 
 var render = function(path) {
     var page = JSON.parse(fs.readFileSync('content.json', 'utf8'));
@@ -103,6 +104,14 @@ var render = function(path) {
 
     render = function() {
         this.render = render;
+
+        var componentModel = componentModels[this.compType];
+
+        if (typeof componentModel !== "undefined") {
+          console.log(componentModels[this.compType]);
+
+          this.model = componentModel.init(this);
+        }
 
         return Mustache.render('{{> ' + this.compType  + '}}', this, componentTemplates);
     };
