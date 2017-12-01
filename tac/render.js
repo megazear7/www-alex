@@ -6,6 +6,7 @@ const componentModels = require('../components/components.js')
 var render = function(path) {
     var page = JSON.parse(fs.readFileSync('content.json', 'utf8'));
     var home = page;
+    home.isHome = true;
 
     var isSafe = function(key, json) {
       return ["children", "siblings", "home", "parent", "page"].indexOf(key) == -1 && typeof json[key] === "object";

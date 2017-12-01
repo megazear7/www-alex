@@ -1,0 +1,20 @@
+const init = function(node) {
+
+  var links = [];
+  var page = node.page;
+
+  while (! page.isHome) {
+    links.push({ href: page.path, title: page.title});
+    page = page.parent
+  }
+
+  links.push({ href: page.path, title: page.title});
+  links.reverse();
+  links[links.length-1].isLast = true;
+
+  return {
+    links: links
+  }
+};
+
+module.exports = { init: init };
