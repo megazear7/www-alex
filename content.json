@@ -39,13 +39,12 @@
         "header": {
             "compType": "header"
         },
+        "breadcrumbs": {
+            "compType": "breadcrumbs"
+        },
         "content": {
             "compType": "compList",
             "components": [
-                {
-                    "tacType": "component",
-                    "compType": "breadcrumbs"
-                },
                 {
                     "tacType": "component",
                     "compType": "heading",

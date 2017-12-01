@@ -7,17 +7,12 @@
     </head>
     <body>
         <div class="onecolumn-container">
-            {{#header}}
-                {{{render}}}
-            {{/header}}
+            {{> header header}}
             <div class="content">
-                {{#content}}
-                    {{{render}}}
-                {{/content}}
+                {{> breadcrumbs breadcrumbs}}
+                {{> compList content}}
             </div>
-            {{#footer}}
-                {{{render}}}
-            {{/footer}}
+            {{> footer footer}}
         </div>
     </body>
 </html>

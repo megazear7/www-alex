@@ -1,5 +1,5 @@
 var fs = require('fs');
-var Mustache = require('Mustache');
+var Handlebars = require('Handlebars');
 const { join } = require('path')
 const componentModels = require('../components/components.js')
 
@@ -65,10 +65,7 @@ var render = function(path) {
     page.home = home;
     addReferences(page);
 
-    //console.log(page);
-
     var pathParts = path.split("/");
-
     if (path.length > 0) {
         pathParts.forEach(function (val) {
             page = page[val];
@@ -76,11 +73,10 @@ var render = function(path) {
     }
 
     if (typeof page === "undefined") {
-      // TODO Return the correct HTTP response.
+      // TODO Return the correct 404 HTTP response.
       throw new Error("Page Not Found");
     }
 
-    var componentTemplates = {};
     var pageTemplates = {};
 
     const isDirectory = source => fs.lstatSync(source).isDirectory()
@@ -91,7 +87,8 @@ var render = function(path) {
     directories("components").forEach(function(directory) {
         var name = directory.split("/").slice(-1)[0];
         var template = directory + "/" + name + ".html";
-        componentTemplates[name] = fs.readFileSync(template, 'utf8');
+
+        Handlebars.registerPartial(name, fs.readFileSync(template, 'utf8'));
     });
 
     // TODO in Prod we should not reload the components on every request
@@ -101,23 +98,18 @@ var render = function(path) {
         pageTemplates[name] = fs.readFileSync(template, 'utf8');
     });
 
-    var render;
+    Handlebars.registerHelper('model', function(options) {
+      var componentModel = componentModels[this.compType];
+      var model = { };
 
-    render = function() {
-        this.render = render;
+      if (typeof componentModel !== "undefined") {
+        model = componentModels[this.compType].init(this);
+      }
 
-        var componentModel = componentModels[this.compType];
+      return options.fn(model);
+    });
 
-        if (typeof componentModel !== "undefined") {
-          this.model = componentModel.init(this);
-        }
-
-        return Mustache.render('{{> ' + this.compType  + '}}', this, componentTemplates);
-    };
-
-    page.render = render
-
-    return Mustache.render(pageTemplates[page.pageType], page, componentTemplates);
+    return Handlebars.compile(pageTemplates[page.pageType])(page);;
 };
 
 module.exports = { render: render };
