@@ -1,8 +1,9 @@
+<ul class="breadcrumbs">
 {{#model}}
   {{#links}}
-    <a href="{{href}}">
-      {{title}}
-      {{^isLast}} > {{/isLast}}
-    </a>
+    <li>
+      <a href="{{href}}">{{title}}</a>
+    </li>
   {{/links}}
 {{/model}}
+</ol>

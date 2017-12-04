@@ -10,7 +10,6 @@ const init = function(node) {
 
   links.push({ href: page.path, title: page.title});
   links.reverse();
-  links[links.length-1].isLast = true;
 
   return {
     links: links

@@ -1,3 +1,20 @@
+/* Style the list */
+ul.breadcrumbs {
+    padding: 10px 16px;
+    list-style: none;
+}
+
+/* Display list items side by side */
+ul.breadcrumbs li {
+    display: inline;
+}
+
+/* Add a slash symbol (/) before/behind each list item */
+ul.breadcrumbs li+li:before {
+    padding: 8px;
+    color: black;
+    content: "/\00a0";
+}
 .examples hr {
   border-color: orange;
 }

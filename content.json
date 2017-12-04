@@ -63,6 +63,9 @@
             "header": {
                 "compType": "header"
             },
+            "breadcrumbs": {
+                "compType": "breadcrumbs"
+            },
             "content": {
                 "compType": "compList",
                 "components": [
