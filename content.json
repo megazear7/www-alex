@@ -30,7 +30,11 @@
         ]
     },
     "footer": {
-        "compType": "footer"
+        "compType": "footer",
+        "links": [
+          {"href": "https://github.com/megazear7", "title": "Github"},
+          {"href": "https://plus.google.com/u/0/+AlexLockhart7", "title": "Google+"}
+        ]
     },
     "aboutme": {
         "title": "About Me",

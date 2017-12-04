@@ -22,6 +22,29 @@ ul.breadcrumbs li+li:before {
     height: 100px;
     background-color: gray;
 }
+
+.footer ul {
+    padding: 10px 16px;
+    list-style: none;
+    text-align: center;
+    font-size: 18px;
+}
+
+.footer ul a {
+  text-decoration: none !important;
+}
+
+.footer ul a:visited {
+  color: black;
+}
+
+.footer ul a:link {
+  color: black;
+}
+
+.footer ul a:hover {
+    color: black;
+}
 .header hr {
     border-style: solid;
     border-width: 1px;

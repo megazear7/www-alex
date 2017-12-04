@@ -11,7 +11,9 @@
             <div class="content">
                 {{render "content" "compList"}}
             </div>
-            {{render "footer"}}
+            {{#home.footer}}
+              {{render false "footer"}}
+            {{/home.footer}}
         </div>
     </body>
 </html>

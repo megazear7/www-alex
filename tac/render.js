@@ -73,7 +73,7 @@ var render = function(path) {
             page = page[val];
         });
     }
-    
+
     home.path = "/";
 
     if (typeof page === "undefined") {
@@ -109,6 +109,8 @@ var render = function(path) {
      * If param2 is a string we assume this defines the compType. Otherwise we
      * assume that the compType equals the nodeName. */
     Handlebars.registerHelper('render', function(nodeName, param2) {
+      // TODO if the first parameter is an object, use that as the subNode.
+      
       var compType = nodeName;
       if (typeof param2 === "string") {
         compType = param2;
