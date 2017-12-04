@@ -5,7 +5,7 @@ body {
 .onecolumn-container {
   display: grid;
   grid-gap: 0px;
-  grid-template-columns: 1fr;
+  grid-template-columns: auto;
   grid-template-rows: auto 1fr auto;
   grid-template-areas:
     "header"
@@ -28,13 +28,20 @@ body {
 }
 
 @media (min-width: 600px) {
+  .content {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
 
 }
 
-@media (min-width: 770px) {
-
-}
-
-@media (min-width: 1000px) {
-
+@media (min-width: 800px) {
+  .onecolumn-container {
+    grid-template-columns: auto 800px auto;
+    grid-template-rows: auto 1fr auto;
+    grid-template-areas:
+      "header     header  header"
+      "leftgutter content rightgutter"
+      "footer     footer  footer";
+  }
 }

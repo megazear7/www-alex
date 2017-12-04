@@ -1,9 +1,22 @@
-.header-content {
-    height: 75px;
-}
-
 .header hr {
     border-style: solid;
     border-width: 1px;
     border-color: gray;
+}
+
+.header ul {
+    padding: 10px 16px;
+    list-style: none;
+    text-align: center;
+    font-size: 18px;
+}
+
+.header ul li {
+    display: inline;
+}
+
+.header ul li+li:before {
+    padding: 20px;
+    color: black;
+    content: "-";
 }

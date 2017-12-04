@@ -1,7 +1,7 @@
 <div class="header">
-    <div class="header-content">
-        {{message}}
-    </div>
-
-    <hr>
+  <ul>
+    {{#each page.home.children}}
+      <li><a href="{{path}}">{{title}}</a></li>
+    {{/each}}
+  </ul>
 </div>

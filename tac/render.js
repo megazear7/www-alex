@@ -73,6 +73,8 @@ var render = function(path) {
             page = page[val];
         });
     }
+    
+    home.path = "/";
 
     if (typeof page === "undefined") {
       // TODO Return the correct 404 HTTP response.
