@@ -19,7 +19,7 @@ ul.breadcrumbs li+li:before {
   border-color: orange;
 }
 .footer {
-    height: 100px;
+    min-height: 100px;
     background-color: #999;
 }
 

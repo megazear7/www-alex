@@ -33,6 +33,7 @@
         "compType": "footer",
         "links": [
           {"href": "https://github.com/megazear7", "title": "Github"},
+          {"href": "https://www.linkedin.com/in/alex-lockhart-a1623079/", "title": "LinkedIn"},
           {"href": "https://plus.google.com/u/0/+AlexLockhart7", "title": "Google+"}
         ]
     },
@@ -121,6 +122,76 @@
                     "compType": "heading",
                     "size": "h1",
                     "heading": "Resume"
+                },
+                {
+                    "tacType": "component",
+                    "compType": "heading",
+                    "size": "h2",
+                    "heading": "Objectives",
+                    "subText": "Continue to work in the software field, contributing my software engineering and development process skills to help create innovative solutions."
+                },
+                {
+                    "tacType": "component",
+                    "compType": "heading",
+                    "size": "h2",
+                    "heading": "Education",
+                    "subText": "Bachelor’s degree in Computer Science and Engineering from The Ohio State University. Graduation Date: May, 2015. GPA: 3.3"
+                },
+                {
+                    "tacType": "component",
+                    "compType": "heading",
+                    "size": "h2",
+                    "heading": "Work Experience",
+                    "subText": ""
+                },
+                {
+                    "tacType": "component",
+                    "compType": "heading",
+                    "size": "h3",
+                    "heading": "ICF Olson",
+                    "subText": "Worked in the Adobe Experience Manager platform with multiple clients with an array of implementations while integrating many other platforms and services."
+                },
+                {
+                    "tacType": "component",
+                    "compType": "heading",
+                    "size": "h3",
+                    "heading": "TotalSim",
+                    "subText": "Creating Ruby on Rails apps that run on and interact with the Ohio Supercomputer Center doing automated high performance computing (HPC) tasks."
+                },
+                {
+                    "tacType": "component",
+                    "compType": "heading",
+                    "size": "h3",
+                    "heading": "IBM",
+                    "subText": "Desktop Application Java Development."
+                },
+                {
+                    "tacType": "component",
+                    "compType": "heading",
+                    "size": "h3",
+                    "heading": "Park Bench Digital",
+                    "subText": "Web application maintenance and development. Worked with clients to meet goals for website."
+                },
+                {
+                    "tacType": "component",
+                    "compType": "heading",
+                    "size": "h3",
+                    "heading": "Meet Your Gig",
+                    "subText": "Designed, created and lead development on www.meetyourgig.com. Worked on a small start up team where everyone had to be devoted to the work and where everyone was influential to all parts of the business."
+                },
+                {
+                    "tacType": "component",
+                    "compType": "heading",
+                    "size": "h3",
+                    "heading": "Manta Media Inc.",
+                    "subText": "Web application maintenance and development. Worked with a team of engineers to maintain and enhance the website www.manta.com"
+                },
+                {
+                    "tacType": "component",
+                    "compType": "heading",
+                    "size": "h2",
+                    "heading": "Skills",
+                    "subText": "Certified Adobe AEM Lead Developer. Has experience in Java, Ruby, RoR, JSP, JSTL, JavaScript, Ajax, HTML, CSS, Sass, Node.js, Groovy, Python. Git, SVN, Linux, Bash, and Vim. SQL, Solr, AEM, JCR, Sling, OSGI, MongoDB. jQuery, React, Angular, Material Design, Bootstrap"
                 }
             ]
         },
