@@ -55,6 +55,34 @@
                     "compType": "heading",
                     "size": "h1",
                     "heading": "About Me"
+                },
+                {
+                    "tacType": "component",
+                    "compType": "heading",
+                    "size": "h2",
+                    "heading": "Faith",
+                    "subText": "I am a christian and I attend Covenant Community Church of Newark, Ohio. We are a reformed baptist church confessing the 1689 Second London Baptist Confession of Faith."
+                },
+                {
+                    "tacType": "component",
+                    "compType": "heading",
+                    "size": "h2",
+                    "heading": "Family",
+                    "subText": "I am married to Mikayla Lockhart and we have one daughter named Pippa"
+                },
+                {
+                    "tacType": "component",
+                    "compType": "heading",
+                    "size": "h2",
+                    "heading": "Life",
+                    "subText": "I have more hobby's than I can manage, and more goals than I could ever accomplish. However I try to continue to learn and grow in all aspects of life."
+                },
+                {
+                    "tacType": "component",
+                    "compType": "heading",
+                    "size": "h2",
+                    "heading": "Growing up",
+                    "subText": "I was raised in Newark Ohio."
                 }
             ]
         },
@@ -214,6 +242,34 @@
                     "compType": "heading",
                     "size": "h1",
                     "heading": "Interests"
+                },
+                {
+                    "tacType": "component",
+                    "compType": "heading",
+                    "size": "h2",
+                    "heading": "Gaming",
+                    "subText": "Boardgames, card games, roleplaying games, miniature games, you name it. Besides video games, not so much into that ;)"
+                },
+                {
+                    "tacType": "component",
+                    "compType": "heading",
+                    "size": "h2",
+                    "heading": "Software Development",
+                    "subText": "Programming is not just my job - it's also my hobby."
+                },
+                {
+                    "tacType": "component",
+                    "compType": "heading",
+                    "size": "h2",
+                    "heading": "Backpacking",
+                    "subText": "I've learned this is difficult with a kid."
+                },
+                {
+                    "tacType": "component",
+                    "compType": "heading",
+                    "size": "h2",
+                    "heading": "Health",
+                    "subText": "Nutrition, weight lifting, running. I love to feel good and be healthy."
                 }
             ]
         },
