@@ -20,7 +20,7 @@ ul.breadcrumbs li+li:before {
 }
 .footer {
     height: 100px;
-    background-color: gray;
+    background-color: #999;
 }
 
 .footer ul {
@@ -38,7 +38,6 @@ ul.breadcrumbs li+li:before {
 .header ul {
     list-style: none;
     text-align: center;
-    font-size: 18px;
     margin: 0;
     padding: 18px;
     border-bottom: 1px solid grey;
@@ -202,11 +201,7 @@ a {
 }
 
 .inverted a {
-  color: #bbb;
-}
-
-a:visited {
-  color: auto;
+  color: #ccc;
 }
 
 a:hover {

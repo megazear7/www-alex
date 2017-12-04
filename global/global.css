@@ -34,11 +34,7 @@ a {
 }
 
 .inverted a {
-  color: #bbb;
-}
-
-a:visited {
-  color: auto;
+  color: #ccc;
 }
 
 a:hover {
