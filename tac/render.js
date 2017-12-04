@@ -7,6 +7,7 @@ var render = function(path) {
     var page = JSON.parse(fs.readFileSync('content.json', 'utf8'));
     var home = page;
     home.isHome = true;
+    home.nodeName = "";
 
     var isSafe = function(key, json) {
       return ["children", "siblings", "home", "parent", "page"].indexOf(key) == -1 && typeof json[key] === "object";
@@ -33,6 +34,7 @@ var render = function(path) {
             if (isSafe(key, json)) {
                 json[key].parent = json;
                 json[key].path = json.path + "/" + key;
+                json[key].nodeName = key;
 
                 if (json[key].tacType != "page") {
                     json[key].page = containingPage(json[key]);
@@ -77,6 +79,7 @@ var render = function(path) {
       throw new Error("Page Not Found");
     }
 
+    var componentTemplates = {};
     var pageTemplates = {};
 
     const isDirectory = source => fs.lstatSync(source).isDirectory()
@@ -89,6 +92,7 @@ var render = function(path) {
         var template = directory + "/" + name + ".html";
 
         Handlebars.registerPartial(name, fs.readFileSync(template, 'utf8'));
+        componentTemplates[name] = Handlebars.compile(fs.readFileSync(template, 'utf8'));
     });
 
     // TODO in Prod we should not reload the components on every request
@@ -98,15 +102,35 @@ var render = function(path) {
         pageTemplates[name] = fs.readFileSync(template, 'utf8');
     });
 
-    Handlebars.registerHelper('model', function(options) {
-      var componentModel = componentModels[this.compType];
-      var model = { };
-
-      if (typeof componentModel !== "undefined") {
-        model = componentModels[this.compType].init(this);
+    /* If nodeName is false, then we assume that the current node is the actual
+     * node. I.e there is no sub node.
+     * If param2 is a string we assume this defines the compType. Otherwise we
+     * assume that the compType equals the nodeName. */
+    Handlebars.registerHelper('render', function(nodeName, param2) {
+      var compType = nodeName;
+      if (typeof param2 === "string") {
+        compType = param2;
       }
 
-      return options.fn(model);
+      if (nodeName && typeof this[nodeName] === "undefined") {
+        this[nodeName] = { compType: compType };
+        addReferences(this);
+      }
+
+      var subNode;
+      if (nodeName === false) {
+        subNode = this;
+      } else {
+        subNode = this[nodeName];
+      }
+
+      var componentModel = componentModels[subNode.compType];
+
+      if (typeof componentModel !== "undefined") {
+        subNode.model = componentModels[subNode.compType].init(subNode);
+      }
+
+      return new Handlebars.SafeString(componentTemplates[subNode.compType](subNode));
     });
 
     return Handlebars.compile(pageTemplates[page.pageType])(page);;

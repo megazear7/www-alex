@@ -7,22 +7,14 @@
     </head>
     <body>
         <div class="homepage-container">
-            {{#header}}
-                {{{render}}}
-            {{/header}}
+            {{render "header"}}
             <div class="primary">
-                {{#primary}}
-                    {{{render}}}
-                {{/primary}}
+                {{render "primary"}}
             </div>
             <div class="secondary">
-                {{#secondary}}
-                    {{{render}}}
-                {{/secondary}}
+                {{render "secondary"}}
             </div>
-            {{#footer}}
-                {{{render}}}
-            {{/footer}}
+            {{render "footer"}}
         </div>
     </body>
 </html>

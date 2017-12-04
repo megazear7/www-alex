@@ -7,12 +7,12 @@
     </head>
     <body>
         <div class="onecolumn-container">
-            {{> header header}}
+            {{render "header"}}
             <div class="content">
-                {{> breadcrumbs breadcrumbs}}
-                {{> compList content}}
+                {{render "breadcrumbs"}}
+                {{render "content" "compList"}}
             </div>
-            {{> footer footer}}
+            {{render "footer"}}
         </div>
     </body>
 </html>
