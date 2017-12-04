@@ -13,7 +13,7 @@
             {
                 "tacType": "component",
                 "compType": "image",
-                "href": "https://lh4.googleusercontent.com/WhsARuhJGFtziC187aer_aSYFnpSa3LpVxNRPVutsB1XiazZ_G0WX30-5gAeYPiQFv-53RrItteVT-R_nMk69w=w2750-h1496-rw"
+                "href": "https://image.ibb.co/nqBNSw/IMG_20170928_071353.jpg"
             }
         ]
     },
@@ -52,8 +52,8 @@
                 {
                     "tacType": "component",
                     "compType": "heading",
-                    "size": "h2",
-                    "heading": "Hello, I am the aboutme page"
+                    "size": "h1",
+                    "heading": "About Me"
                 }
             ]
         },
@@ -119,8 +119,8 @@
                 {
                     "tacType": "component",
                     "compType": "heading",
-                    "size": "h2",
-                    "heading": "Here is my resume"
+                    "size": "h1",
+                    "heading": "Resume"
                 }
             ]
         },
@@ -128,8 +128,8 @@
             "compType": "footer"
         }
     },
-    "exampleB": {
-        "title": "Example B",
+    "interests": {
+        "title": "Interests",
         "tacType": "page",
         "pageType": "onecolumnpage",
         "header": {
@@ -140,7 +140,9 @@
             "components": [
                 {
                     "tacType": "component",
-                    "compType": "example"
+                    "compType": "heading",
+                    "size": "h1",
+                    "heading": "Interests"
                 }
             ]
         },

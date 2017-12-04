@@ -59,11 +59,11 @@ h1 small {
   display: grid;
   grid-gap: 0px;
   grid-template-columns: 1fr;
-  grid-template-rows: auto 1fr 1fr auto;
+  grid-template-rows: auto auto 1fr auto;
   grid-template-areas:
     "header"
-    "primary"
     "secondary"
+    "primary"
     "footer";
   min-height: 100%;
   margin: auto;
@@ -95,8 +95,8 @@ h1 small {
     grid-template-rows: auto 1fr auto auto;
     grid-template-areas:
       "header"
-      "primary"
       "secondary"
+      "primary"
       "footer";
   }
 }
@@ -114,7 +114,7 @@ h1 small {
 
 @media (min-width: 1000px) {
   .homepage-container {
-    grid-template-columns: 1fr 500px 500px 1fr;
+    grid-template-columns: 1fr 400px 400px 1fr;
     grid-template-rows: auto 1fr auto;
     grid-template-areas:
       "header     header  header    header"
