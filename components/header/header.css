@@ -5,18 +5,15 @@
 }
 
 .header ul {
-    padding: 10px 16px;
     list-style: none;
     text-align: center;
     font-size: 18px;
+    margin: 0;
+    padding: 18px;
+    border-bottom: 1px solid grey;
 }
 
 .header ul li {
     display: inline;
-}
-
-.header ul li+li:before {
-    padding: 20px;
-    color: black;
-    content: "-";
+    padding: 0px 15px;
 }

@@ -7,6 +7,8 @@ body {
   margin: 0;
   padding: 0;
   font-family: sans-serif;
+  font-size: 18px;
+  line-height: 26px;
 }
 
 body:before {
@@ -24,4 +26,26 @@ body:before {
   body:before {
     content: "desktop";
   }
+}
+
+a {
+  color: #555;
+  text-decoration: none;
+}
+
+.inverted a {
+  color: #bbb;
+}
+
+a:visited {
+  color: auto;
+}
+
+a:hover {
+  color: #68a;
+  text-decoration: none;
+}
+
+.inverted a:hover {
+  color: #8ac;
 }
