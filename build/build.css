@@ -24,10 +24,15 @@ ul.breadcrumbs li+li:before {
 }
 
 .footer ul {
-    padding: 10px 16px;
+    margin: 0;
+    padding: 25px 0 30px;
     list-style: none;
     text-align: center;
-    font-size: 18px;
+}
+
+.footer ul li {
+    display: inline;
+    padding: 5px 15px;
 }
 .header hr {
     border-style: solid;

@@ -51,6 +51,7 @@ const init = function(node) {
 module.exports = { init: init };
 const init = function(node) {
   return {
+    isExternal: node.href.indexOf("/") !== 0,
     isCurrentPage: node.page.path === node.href,
     title: node.title,
     href: node.href

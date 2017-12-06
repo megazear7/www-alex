@@ -1,3 +1,5 @@
-<a href="{{model.href}}" {{#if model.isCurrentPage}}disabled{{/if}}>
+<a href="{{model.href}}"
+   {{#if model.isCurrentPage}}disabled{{/if}}
+   {{#if model.isExternal}}target="_blank"{{/if}}>
   {{title}}
 </a>
