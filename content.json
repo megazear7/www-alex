@@ -32,9 +32,24 @@
     "footer": {
         "compType": "footer",
         "links": [
-          {"href": "https://github.com/megazear7", "title": "Github"},
-          {"href": "https://www.linkedin.com/in/alex-lockhart-a1623079/", "title": "LinkedIn"},
-          {"href": "https://plus.google.com/u/0/+AlexLockhart7", "title": "Google+"}
+            {
+              "tacType": "component",
+              "compType": "link",
+              "href": "https://github.com/megazear7",
+              "title": "Github"
+            },
+            {
+              "tacType": "component",
+              "compType": "link",
+              "href": "https://www.linkedin.com/in/alex-lockhart-a1623079/",
+              "title": "LinkedIn"
+            },
+            {
+              "tacType": "component",
+              "compType": "link",
+              "href": "https://plus.google.com/u/0/+AlexLockhart7",
+              "title": "Google+"
+            }
         ]
     },
     "aboutme": {

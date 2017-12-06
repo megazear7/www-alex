@@ -56,6 +56,9 @@ ul.breadcrumbs li+li:before {
     width: 100%;
     border-radius: 3px;
 }
+a[disabled], a[disabled]:hover {
+   pointer-events: none;
+}
 h1 small {
     font-size: .5em;
     color: gray;
@@ -212,10 +215,6 @@ a {
 a:hover {
   color: #68a;
   text-decoration: none;
-}
-
-a[disabled], a[disabled]:hover {
-   pointer-events: none;
 }
 
 .inverted a:hover {

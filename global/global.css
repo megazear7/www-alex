@@ -42,10 +42,6 @@ a:hover {
   text-decoration: none;
 }
 
-a[disabled], a[disabled]:hover {
-   pointer-events: none;
-}
-
 .inverted a:hover {
   color: #8ac;
 }
