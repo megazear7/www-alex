@@ -69,7 +69,8 @@
                     "tacType": "component",
                     "compType": "heading",
                     "size": "h1",
-                    "heading": "About Me"
+                    "heading": "About Me",
+                    "hasHr": true
                 },
                 {
                     "tacType": "component",
@@ -164,7 +165,8 @@
                     "tacType": "component",
                     "compType": "heading",
                     "size": "h1",
-                    "heading": "Resume"
+                    "heading": "Resume",
+                    "hasHr": true
                 },
                 {
                     "tacType": "component",
@@ -256,7 +258,8 @@
                     "tacType": "component",
                     "compType": "heading",
                     "size": "h1",
-                    "heading": "Interests"
+                    "heading": "Interests",
+                    "hasHr": true
                 },
                 {
                     "tacType": "component",

@@ -17,18 +17,12 @@
 
 .content {
   grid-area: content;
+  background-color: white;
+  padding: 10px 30px 30px;
 }
 
 .footer {
   grid-area: footer;
-}
-
-@media (min-width: 600px) {
-  .content {
-    padding-left: 30px;
-    padding-right: 30px;
-  }
-
 }
 
 @media (min-width: 800px) {
@@ -39,5 +33,11 @@
       "header     header  header"
       "leftgutter content rightgutter"
       "footer     footer  footer";
+  }
+
+  .content {
+    box-shadow: 1px 1px 3px rgba(100,100,100,0.8);
+    border-radius: 5px;
+    margin-bottom: 25px;
   }
 }
