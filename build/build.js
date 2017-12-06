@@ -28,6 +28,18 @@ const init = function(node) {
 };
 
 module.exports = { init: init };
+const init = function(node) {
+  console.log("node.page.path: \"" + node.page.path + "\"");
+  console.log("node.href: \"" + node.href + "\"");
+  console.log("node.page.path == node.href: " + (node.page.path === node.href));
+  return {
+    isCurrentPage: node.page.path === node.href,
+    title: node.title,
+    href: node.href
+  }
+};
+
+module.exports = { init: init };
 var getBreakpoint = function () {
   return window.getComputedStyle(window.document.querySelector('body'), ':before').getPropertyValue('content').replace(/"/g, '');
 };
