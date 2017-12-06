@@ -166,9 +166,6 @@ h1 small {
   grid-area: footer;
 }
 
-@media (min-width: 600px) {
-}
-
 @media (min-width: 800px) {
   .onecolumn-container {
     grid-template-columns: auto 800px auto;
@@ -187,6 +184,8 @@ h1 small {
 }
 html {
   height: 100%;
+  font-size: 20px;
+  line-height: 27px;
 }
 
 body {
@@ -194,8 +193,6 @@ body {
   margin: 0;
   padding: 0;
   font-family: sans-serif;
-  font-size: 18px;
-  line-height: 26px;
   background-color: #efefef;
 }
 
@@ -216,8 +213,44 @@ body:before {
   }
 }
 
+h1 {
+  font-size: 2.5rem;
+  color: #357;
+}
+
+h2 {
+  font-size: 1.6rem;
+  color: #68a;
+}
+
+h3 {
+  font-size: 1.3rem;
+  color: #555;
+}
+
+h4 {
+  font-size: 1.2rem;
+  color: #444;
+}
+
+h5 {
+  font-size: 1.1rem;
+  color: #333;
+}
+
+h6 {
+  font-size: 1rem;
+  color: black;
+}
+
+p {
+  font-size: 1rem;
+  color: rgba(25,25,25,0.8);
+}
+
 a {
   color: #555;
+  font-size: 1rem;
   text-decoration: none;
 }
 
