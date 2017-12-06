@@ -1,8 +1,9 @@
 <div class="header">
   <ul>
-    <li><a href="{{page.home.path}}">{{page.home.title}}</a></li>
-    {{#each page.home.children}}
-      <li><a href="{{path}}">{{title}}</a></li>
+    {{#each model.links}}
+      <li class="{{#if isCurrentPage}}active{{/if}}">
+        <a href="{{href}}" {{#if isCurrentPage}}disabled{{/if}}>{{title}}</a>
+      </li>
     {{/each}}
   </ul>
 </div>

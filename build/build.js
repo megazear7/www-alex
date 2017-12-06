@@ -29,9 +29,27 @@ const init = function(node) {
 
 module.exports = { init: init };
 const init = function(node) {
-  console.log("node.page.path: \"" + node.page.path + "\"");
-  console.log("node.href: \"" + node.href + "\"");
-  console.log("node.page.path == node.href: " + (node.page.path === node.href));
+  links = [{
+      href: node.page.home.path,
+      title: node.page.home.title,
+      isCurrentPage: node.page.home.path === node.page.path
+  }];
+
+  node.page.home.children.forEach(function(child) {
+    links.push({
+      href: child.path,
+      title: child.title,
+      isCurrentPage: child.path === node.page.path
+    });
+  });
+
+  return {
+    links: links
+  }
+};
+
+module.exports = { init: init };
+const init = function(node) {
   return {
     isCurrentPage: node.page.path === node.href,
     title: node.title,
