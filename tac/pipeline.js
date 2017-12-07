@@ -1,12 +1,14 @@
 var fs = require('fs');
 const { join } = require('path')
+var gulp = require('gulp');
+var sass = require('gulp-sass');
 
 const isDirectory = source => fs.lstatSync(source).isDirectory()
 const directories = source =>
   fs.readdirSync(source).map(name => join(source, name)).filter(isDirectory)
 
 var build = function() {
-    js = ""; 
+    js = "";
     css = "";
 
     var addFromDirectory = function(directory) {
@@ -39,11 +41,11 @@ var build = function() {
         }
     });
 
-    fs.writeFile("./build/build.css", css, function(err) {
+    /*fs.writeFile("./build/build.css", css, function(err) {
         if (err) {
             console.log(err);
         }
-    });
+    });*/
 };
 
 module.exports = { build: build };
