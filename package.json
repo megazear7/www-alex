@@ -10,7 +10,8 @@
     "express": "^4.16.2",
     "gulp": "^3.9.1",
     "handlebars": "^4.0.11",
-    "tactile-broker": "^1.0.1"
+    "tactile-broker": "^1.0.1",
+    "tactile-clerk": "^1.0.0"
   },
   "devDependencies": {
     "gulp-concat": "^2.6.1",
