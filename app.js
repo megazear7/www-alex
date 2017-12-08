@@ -6,8 +6,6 @@ const app = express();
 app.use(express.static('build'));
 
 app.get('/*', function (req, res) {
-    // TODO in Prod we should not rebuild the assets on every request
-    tac.build();
     console.log("Request: " + req.path);
     res.send(tac.render(req.path.slice(1)));
 });
